@@ -111,7 +111,7 @@ img {
 
   
 
-.header-list-link .studio {
+.studio {
   color:  #404bbF;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -333,7 +333,7 @@ height: 40px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.network-icon {
+.social-icon {
   width: 16px;
   height: 16px;
 }
@@ -389,22 +389,6 @@ height: 40px;
   overflow: hidden;
 }
 
-image-cover-box {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  padding: 40px 32px;
-  isplay: flex;
-  lign-items: center;
-  ustify-content: center;
-  border: 1px solid #F4F4FD;
-background: #4D5AE5;
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-transform: translateY(100%);
-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
 .cover-text {
   color: #F4F4FD;
 font-size: 16px;
@@ -524,7 +508,7 @@ margin-bottom: 16px;
   }
 
   .network-item-icon:focus {
-    background-color: #31D0AA;
+    background-color: #31d0aa;
   } 
 
   .social-icon {
