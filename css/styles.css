@@ -117,7 +117,7 @@ img {
 }
 
 .studio::after {
-  color: #404bbf;
+  background-color: #404bbf;
   position: absolute;
   width: 100%;
   height: 4px;
@@ -145,6 +145,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover,
@@ -197,6 +198,7 @@ img {
   min-width: 169px;
   height: 56px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-order-btn {
@@ -231,6 +233,9 @@ width: 264px;
 height: 112px;
 padding: 24px 100px;
 margin-bottom: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 
@@ -304,21 +309,37 @@ margin-bottom: 8px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
-.social-networks {
+.social-networks-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 .network-item {
-background-color: #4D5AE5;
 width: 40px;
 height: 40px;
-border-radius: 50%;
+
 }
-.network-icon {
-  
+.network-item-area {
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.network-item-area:hover,
+.network-item-area:focus {
+  background-color: #404bbf;
+}
+
+
 
 /* -----PORTFOLIO----- */
 
@@ -349,8 +370,40 @@ border-radius: 50%;
   width: 360px;
 }
 
+.portfolio-list-item:hover .image-cover-box {
+  transform: translateY(0%);
+}
 .portfolio-img {
 }
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-cover-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding: 40px 32px;
+  isplay: flex;
+  lign-items: center;
+  ustify-content: center;
+  border: 1px solid #F4F4FD;
+background: #4D5AE5;
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.cover-text {
+  color: #F4F4FD;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.5;
+letter-spacing: 0.02em;
+}
+
 
 .portfolio-item-info {
   padding: 32px 16px;
@@ -381,7 +434,13 @@ border-radius: 50%;
   background: #2e2f42;
   padding: 100px 0;
 }
-
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.logo-text-box {
+  margin-right: 120px;
+}
 .footer-logo {
   color: #4d5ae5;
   font-family: Raleway, sans-serif;
@@ -405,3 +464,43 @@ border-radius: 50%;
   letter-spacing: 0.02em;
   max-width: 264px;
 }
+
+.footer-social-networks {
+
+}
+
+.footer-networks-text {
+  color:  #FFFFFF;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+margin-bottom: 16px;
+}
+
+.footer-networks-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-network-item {
+  width: 40px;
+  height: 40px;
+  
+  }
+  .network-item-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #f4f4fd;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .network-item-icon:hover,
+  .network-item-icon:focus {
+    background-color: #31D0AA;
+  }
